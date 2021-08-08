@@ -1,0 +1,17 @@
+import { resolveComponent as _resolveComponent, createVNode as _createVNode, Fragment as _Fragment, openBlock as _openBlock, createBlock as _createBlock, withScopeId as _withScopeId } from "vue"
+const _withId = /*#__PURE__*/_withScopeId("data-v-39490d")
+
+export const render = /*#__PURE__*/_withId((_ctx, _cache) => {
+  const _component_Testimonial = _resolveComponent("Testimonial")
+  const _component_MovieFilter = _resolveComponent("MovieFilter")
+
+  return (_openBlock(), _createBlock(_Fragment, null, [
+    _createVNode(_component_Testimonial),
+    _createVNode(_component_MovieFilter)
+  ], 64 /* STABLE_FRAGMENT */))
+})
+if (module.hot) {
+  module.hot.accept(() => {
+    __VUE_HMR_RUNTIME__.rerender('39490d-hmr', render);
+  })
+}

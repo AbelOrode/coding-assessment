@@ -1,0 +1,84 @@
+import { createVNode as _createVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createBlock as _createBlock, toDisplayString as _toDisplayString, vModelText as _vModelText, withDirectives as _withDirectives, createTextVNode as _createTextVNode, createStaticVNode as _createStaticVNode, withScopeId as _withScopeId, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from "vue"
+const _withId = /*#__PURE__*/_withScopeId("data-v-3b1df4")
+
+_pushScopeId("data-v-3b1df4")
+const _hoisted_1 = /*#__PURE__*/_createVNode("div", { class: "exercise-header" }, [
+  /*#__PURE__*/_createVNode("h2", null, "Exercise 2 - Filterable content")
+], -1 /* HOISTED */)
+const _hoisted_2 = { class: "grid-container" }
+const _hoisted_3 = { class: "grid-item" }
+const _hoisted_4 = { id: "filterGenre" }
+const _hoisted_5 = { class: "grid-item" }
+const _hoisted_6 = { id: "filterYear" }
+const _hoisted_7 = { class: "grid-item" }
+const _hoisted_8 = /*#__PURE__*/_createStaticVNode("<div class=\"grid-item\" data-v-3b1df4><input type=\"radio\" name=\"media_type\" id=\"movie\" value=\"movie\" checked data-v-3b1df4><label for=\"movie\" data-v-3b1df4>Movie</label>    <input type=\"radio\" name=\"media_type\" id=\"book\" value=\"book\" data-v-3b1df4><label for=\"book\" data-v-3b1df4>Book</label></div>", 1)
+const _hoisted_9 = { class: "content" }
+const _hoisted_10 = { class: "grid-container" }
+const _hoisted_11 = { class: "movie-title" }
+const _hoisted_12 = { class: "movie-title" }
+_popScopeId()
+
+export const render = /*#__PURE__*/_withId((_ctx, _cache) => {
+  return (_openBlock(), _createBlock(_Fragment, null, [
+    _hoisted_1,
+    _createVNode("div", _hoisted_2, [
+      _createVNode("div", _hoisted_3, [
+        _createVNode("select", _hoisted_4, [
+          (_openBlock(true), _createBlock(_Fragment, null, _renderList(_ctx.movies, (movie) => {
+            return (_openBlock(), _createBlock("option", {
+              key: movie.title,
+              value: movie.genre[_ctx.counter++]
+            }, _toDisplayString(movie.genre[0]), 9 /* TEXT, PROPS */, ["value"]))
+          }), 128 /* KEYED_FRAGMENT */))
+        ])
+      ]),
+      _createVNode("div", _hoisted_5, [
+        _createVNode("select", _hoisted_6, [
+          (_openBlock(true), _createBlock(_Fragment, null, _renderList(_ctx.movies, (movie) => {
+            return (_openBlock(), _createBlock("option", {
+              value: movie.year,
+              key: movie.year
+            }, _toDisplayString(movie.year), 9 /* TEXT, PROPS */, ["value"]))
+          }), 128 /* KEYED_FRAGMENT */))
+        ])
+      ]),
+      _createVNode("div", _hoisted_7, [
+        _withDirectives(_createVNode("input", {
+          class: "text",
+          "onUpdate:modelValue": _cache[1] || (_cache[1] = $event => (_ctx.searchTerm = $event)),
+          id: "searchBar",
+          placeholder: "Search movie by title"
+        }, null, 512 /* NEED_PATCH */), [
+          [_vModelText, _ctx.searchTerm]
+        ])
+      ])
+    ]),
+    _hoisted_8,
+    _createVNode("div", _hoisted_9, [
+      _createVNode("div", _hoisted_10, [
+        (_openBlock(true), _createBlock(_Fragment, null, _renderList(_ctx.filterSearch, (movie, title) => {
+          return (_openBlock(), _createBlock("div", {
+            class: "grid-item",
+            key: title
+          }, [
+            _createVNode("img", {
+              src: movie.poster,
+              class: "responsive"
+            }, null, 8 /* PROPS */, ["src"]),
+            _createVNode("p", _hoisted_11, [
+              _createVNode("span", null, _toDisplayString(movie.title) + "  " + _toDisplayString(movie.year), 1 /* TEXT */)
+            ]),
+            _createVNode("p", _hoisted_12, [
+              _createVNode("span", null, "Genre" + _toDisplayString(movie.genre), 1 /* TEXT */)
+            ])
+          ]))
+        }), 128 /* KEYED_FRAGMENT */))
+      ])
+    ])
+  ], 64 /* STABLE_FRAGMENT */))
+})
+if (module.hot) {
+  module.hot.accept(() => {
+    __VUE_HMR_RUNTIME__.rerender('3b1df4-hmr', render);
+  })
+}

@@ -1,0 +1,6 @@
+"use strict";
+if ("development" === 'production') {
+  module.exports = require('./dist/runtime-dom.cjs.prod.js');
+} else {
+  module.exports = require('./dist/runtime-dom.cjs.js');
+}

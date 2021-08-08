@@ -1,0 +1,24 @@
+
+let script;
+let initialize = () => {
+  script = require('script:./Layout.vue');
+  if (script.__esModule) script = script.default;
+  script.render = require('template:./Layout.vue').render;
+  
+  require('custom:./Layout.vue').default(script);
+  script.__scopeId = 'data-v-39490d';
+  script.__file = "C:\\Users\\Abel Orode\\hubspot-assessment\\src\\components\\Layout.vue";
+};
+initialize();
+if (module.hot) {
+  script.__hmrId = '39490d-hmr';
+  module.hot.accept(() => {
+    setTimeout(() => {
+      initialize();
+      if (!__VUE_HMR_RUNTIME__.createRecord('39490d-hmr', script)) {
+        __VUE_HMR_RUNTIME__.reload('39490d-hmr', script);
+      }
+    }, 0);
+  });
+}
+export default script;

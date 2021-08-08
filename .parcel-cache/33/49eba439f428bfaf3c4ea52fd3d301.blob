@@ -1,0 +1,13 @@
+import { resolveComponent as _resolveComponent, openBlock as _openBlock, createBlock as _createBlock, withScopeId as _withScopeId } from "vue"
+const _withId = /*#__PURE__*/_withScopeId("data-v-da1f25")
+
+export const render = /*#__PURE__*/_withId((_ctx, _cache) => {
+  const _component_Layout = _resolveComponent("Layout")
+
+  return (_openBlock(), _createBlock(_component_Layout))
+})
+if (module.hot) {
+  module.hot.accept(() => {
+    __VUE_HMR_RUNTIME__.rerender('da1f25-hmr', render);
+  })
+}

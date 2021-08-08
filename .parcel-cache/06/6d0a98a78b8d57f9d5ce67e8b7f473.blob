@@ -1,0 +1,43 @@
+
+import movieData from "../data.json"
+
+export default {
+
+
+  data() {
+    return {
+      movies: movieData.media,
+      counter: 0,
+      searchTerm: '',
+      movieYear: null,
+
+    }
+  },
+
+  computed: {
+    filterSearch() {
+
+        return this.movies.filter(movie => {
+          return movie.title.toLowerCase().match(this.searchTerm.toLowerCase())
+        })
+    }
+
+  },
+  methods: {
+    handleChange(event) {
+      if (event.target.options.selectedIndex > -1) {
+        let selectedOption = event.target.options.selectedIndex;
+        console.log(event.target.options[selectedOption].text);
+        return this.movies.filter(movie => {
+          movie.year.match(event.target.options[selectedOption].text)
+        })
+      }
+
+    },
+    changeMovieYear(event) {
+      this.movies.year = event.target.value
+      this.selectMovieYear = event.target.options[event.target.options.selectedIndex].text
+
+    }
+  }
+}

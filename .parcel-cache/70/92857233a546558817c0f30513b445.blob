@@ -1,0 +1,17 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "render", function () {
+  return render;
+});
+var _vue = require("vue");
+const _withId = /*#__PURE__*/_vue.withScopeId("data-v-39490d");
+const render = /*#__PURE__*/_withId((_ctx, _cache) => {
+  const _component_Testimonial = _vue.resolveComponent("Testimonial");
+  const _component_MovieFilter = _vue.resolveComponent("MovieFilter");
+  return (_vue.openBlock(), _vue.createBlock(_vue.Fragment, null, [_vue.createVNode(_component_Testimonial), _vue.createVNode(_component_MovieFilter)], 64));
+});
+if (module.hot) {
+  module.hot.accept(() => {
+    __VUE_HMR_RUNTIME__.rerender('39490d-hmr', render);
+  });
+}

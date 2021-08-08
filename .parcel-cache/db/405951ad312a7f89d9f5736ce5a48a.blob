@@ -1,0 +1,10 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _componentsLayoutVue = require("./components/Layout.vue");
+var _componentsLayoutVueDefault = _parcelHelpers.interopDefault(_componentsLayoutVue);
+exports.default = {
+  components: {
+    Layout: _componentsLayoutVueDefault.default
+  },
+  data() {}
+};

@@ -1,0 +1,15 @@
+import { createVNode as _createVNode, createStaticVNode as _createStaticVNode, withScopeId as _withScopeId, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from "vue"
+const _withId = /*#__PURE__*/_withScopeId("data-v-90ae93")
+
+_pushScopeId("data-v-90ae93")
+const _hoisted_1 = /*#__PURE__*/_createStaticVNode("<div class=\"exercise-header\" data-v-90ae93><h2 data-v-90ae93>Exercise 1 - Testimonial Block</h2></div><div class=\"content\" data-v-90ae93><div class=\"block\" data-v-90ae93><div class=\"text\" data-v-90ae93><p data-v-90ae93>Gingerbread tart cupcake cake muffin cookie liquorice tiramisu. Toffee cupcake cake cake croissant icing carrot cake cookie. Dessert chocolate bar apple pie sesame snaps liquorice carrot cake cookie danish.</p><span data-v-90ae93>Indiana Jones, Archaeologist</span></div><a class=\"link\" data-v-90ae93>Tell Me More</a></div></div>", 2)
+_popScopeId()
+
+export const render = /*#__PURE__*/_withId((_ctx, _cache) => {
+  return _hoisted_1
+})
+if (module.hot) {
+  module.hot.accept(() => {
+    __VUE_HMR_RUNTIME__.rerender('90ae93-hmr', render);
+  })
+}

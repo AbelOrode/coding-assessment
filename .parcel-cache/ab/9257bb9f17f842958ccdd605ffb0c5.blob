@@ -1,0 +1,74 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "render", function () {
+  return render;
+});
+var _vue = require("vue");
+const _withId = /*#__PURE__*/_vue.withScopeId("data-v-3b1df4");
+_vue.pushScopeId("data-v-3b1df4");
+const _hoisted_1 = /*#__PURE__*/_vue.createVNode("div", {
+  class: "exercise-header"
+}, [/*#__PURE__*/_vue.createVNode("h2", null, "Exercise 2 - Filterable content")], -1);
+const _hoisted_2 = {
+  class: "grid-container"
+};
+const _hoisted_3 = {
+  class: "grid-item"
+};
+const _hoisted_4 = {
+  id: "filterGenre"
+};
+const _hoisted_5 = {
+  class: "grid-item"
+};
+const _hoisted_6 = {
+  id: "filterYear"
+};
+const _hoisted_7 = {
+  class: "grid-item"
+};
+const _hoisted_8 = /*#__PURE__*/_vue.createStaticVNode("<div class=\"grid-item\" data-v-3b1df4><input type=\"radio\" name=\"media_type\" id=\"movie\" value=\"movie\" checked data-v-3b1df4><label for=\"movie\" data-v-3b1df4>Movie</label>    <input type=\"radio\" name=\"media_type\" id=\"book\" value=\"book\" data-v-3b1df4><label for=\"book\" data-v-3b1df4>Book</label></div>", 1);
+const _hoisted_9 = {
+  class: "content"
+};
+const _hoisted_10 = {
+  class: "grid-container"
+};
+const _hoisted_11 = {
+  class: "movie-title"
+};
+const _hoisted_12 = {
+  class: "movie-title"
+};
+_vue.popScopeId();
+const render = /*#__PURE__*/_withId((_ctx, _cache) => {
+  return (_vue.openBlock(), _vue.createBlock(_vue.Fragment, null, [_hoisted_1, _vue.createVNode("div", _hoisted_2, [_vue.createVNode("div", _hoisted_3, [_vue.createVNode("select", _hoisted_4, [(_vue.openBlock(true), _vue.createBlock(_vue.Fragment, null, _vue.renderList(_ctx.movies, movie => {
+    return (_vue.openBlock(), _vue.createBlock("option", {
+      key: movie.title,
+      value: movie.genre[_ctx.counter++]
+    }, _vue.toDisplayString(movie.genre[0]), 9, ["value"]));
+  }), 128))])]), _vue.createVNode("div", _hoisted_5, [_vue.createVNode("select", _hoisted_6, [(_vue.openBlock(true), _vue.createBlock(_vue.Fragment, null, _vue.renderList(_ctx.movies, movie => {
+    return (_vue.openBlock(), _vue.createBlock("option", {
+      value: movie.year,
+      key: movie.year
+    }, _vue.toDisplayString(movie.year), 9, ["value"]));
+  }), 128))])]), _vue.createVNode("div", _hoisted_7, [_vue.withDirectives(_vue.createVNode("input", {
+    class: "text",
+    "onUpdate:modelValue": _cache[1] || (_cache[1] = $event => _ctx.searchTerm = $event),
+    id: "searchBar",
+    placeholder: "Search movie by title"
+  }, null, 512), [[_vue.vModelText, _ctx.searchTerm]])])]), _hoisted_8, _vue.createVNode("div", _hoisted_9, [_vue.createVNode("div", _hoisted_10, [(_vue.openBlock(true), _vue.createBlock(_vue.Fragment, null, _vue.renderList(_ctx.filterSearch, (movie, title) => {
+    return (_vue.openBlock(), _vue.createBlock("div", {
+      class: "grid-item",
+      key: title
+    }, [_vue.createVNode("img", {
+      src: movie.poster,
+      class: "responsive"
+    }, null, 8, ["src"]), _vue.createVNode("p", _hoisted_11, [_vue.createVNode("span", null, _vue.toDisplayString(movie.title) + "  " + _vue.toDisplayString(movie.year), 1)]), _vue.createVNode("p", _hoisted_12, [_vue.createVNode("span", null, "Genre" + _vue.toDisplayString(movie.genre), 1)])]));
+  }), 128))])])], 64));
+});
+if (module.hot) {
+  module.hot.accept(() => {
+    __VUE_HMR_RUNTIME__.rerender('3b1df4-hmr', render);
+  });
+}

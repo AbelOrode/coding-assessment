@@ -1,0 +1,12 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _TestimonialVue = require("./Testimonial.vue");
+var _TestimonialVueDefault = _parcelHelpers.interopDefault(_TestimonialVue);
+var _MovieFilterVue = require("./MovieFilter.vue");
+var _MovieFilterVueDefault = _parcelHelpers.interopDefault(_MovieFilterVue);
+exports.default = {
+  components: {
+    Testimonial: _TestimonialVueDefault.default,
+    MovieFilter: _MovieFilterVueDefault.default
+  }
+};

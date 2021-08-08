@@ -1,0 +1,16 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "render", function () {
+  return render;
+});
+var _vue = require("vue");
+const _withId = /*#__PURE__*/_vue.withScopeId("data-v-da1f25");
+const render = /*#__PURE__*/_withId((_ctx, _cache) => {
+  const _component_Layout = _vue.resolveComponent("Layout");
+  return (_vue.openBlock(), _vue.createBlock(_component_Layout));
+});
+if (module.hot) {
+  module.hot.accept(() => {
+    __VUE_HMR_RUNTIME__.rerender('da1f25-hmr', render);
+  });
+}

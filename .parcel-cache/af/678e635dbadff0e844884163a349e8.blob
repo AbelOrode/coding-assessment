@@ -1,0 +1,25 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+let script;
+let initialize = () => {
+  script = require('script:./Testimonial.vue');
+  if (script.__esModule) script = script.default;
+  script.render = require('template:./Testimonial.vue').render;
+  script.__cssModules = require('style:./Testimonial.vue').default;
+  require('custom:./Testimonial.vue').default(script);
+  script.__scopeId = 'data-v-90ae93';
+  script.__file = "C:\\Users\\Abel Orode\\hubspot-assessment\\src\\components\\Testimonial.vue";
+};
+initialize();
+if (module.hot) {
+  script.__hmrId = '90ae93-hmr';
+  module.hot.accept(() => {
+    setTimeout(() => {
+      initialize();
+      if (!__VUE_HMR_RUNTIME__.createRecord('90ae93-hmr', script)) {
+        __VUE_HMR_RUNTIME__.reload('90ae93-hmr', script);
+      }
+    }, 0);
+  });
+}
+exports.default = script;

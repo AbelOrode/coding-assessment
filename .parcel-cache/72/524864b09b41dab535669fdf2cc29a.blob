@@ -1,0 +1,25 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+let script;
+let initialize = () => {
+  script = require('script:./MovieFilter.vue');
+  if (script.__esModule) script = script.default;
+  script.render = require('template:./MovieFilter.vue').render;
+  script.__cssModules = require('style:./MovieFilter.vue').default;
+  require('custom:./MovieFilter.vue').default(script);
+  script.__scopeId = 'data-v-3b1df4';
+  script.__file = "C:\\Users\\Abel Orode\\hubspot-assessment\\src\\components\\MovieFilter.vue";
+};
+initialize();
+if (module.hot) {
+  script.__hmrId = '3b1df4-hmr';
+  module.hot.accept(() => {
+    setTimeout(() => {
+      initialize();
+      if (!__VUE_HMR_RUNTIME__.createRecord('3b1df4-hmr', script)) {
+        __VUE_HMR_RUNTIME__.reload('3b1df4-hmr', script);
+      }
+    }, 0);
+  });
+}
+exports.default = script;
